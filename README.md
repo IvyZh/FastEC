@@ -1,0 +1,2 @@
+# FastEC
+init
