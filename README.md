@@ -18,3 +18,8 @@ https://github.com/YoKeyword/Fragmentation
 加入 compile'com.nineoldandroids:library:2.4.0'   试试
 
 需要设置大小
+
+
+### getSupportDelegate().start(new LauncherScrollDelegate(), SINGLETASK);
+
+如何销毁上一个Delegates？
