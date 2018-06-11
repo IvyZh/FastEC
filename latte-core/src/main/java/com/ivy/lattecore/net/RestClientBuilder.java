@@ -1,11 +1,13 @@
 package com.ivy.lattecore.net;
 
-import com.ivy.lattecore.net.callback.IErrror;
+import android.content.Context;
+
+import com.ivy.lattecore.net.callback.IError;
 import com.ivy.lattecore.net.callback.IFailure;
 import com.ivy.lattecore.net.callback.ISuccess;
+import com.ivy.lattecore.ui.LoaderStyle;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.File;
 import java.util.WeakHashMap;
 
 import okhttp3.MediaType;
@@ -21,8 +23,14 @@ public final class RestClientBuilder {
     private WeakHashMap<String, Object> mParams = RestCreator.getParams();
     private ISuccess mSuccess;
     private IFailure mFailure;
-    private IErrror mErrror;
+    private IError mErrror;
     private RequestBody mBody;
+    private Context mContext;
+    private LoaderStyle mLoaderStyle;
+    private File mFile;
+    private String DOWNLOAD_DIR;
+    private String DOWNLOAD_EXTENSION;
+    private String DOWNLOAD_NAME;
 
     public final RestClientBuilder url(String url) {
         mUrl = url;
@@ -56,12 +64,44 @@ public final class RestClientBuilder {
         return this;
     }
 
-    public final RestClientBuilder error(IErrror errror) {
+    public final RestClientBuilder error(IError errror) {
         mErrror = errror;
         return this;
     }
 
+    public final RestClientBuilder loader(Context context, LoaderStyle loaderStyle) {
+        mContext = context;
+        mLoaderStyle = loaderStyle;
+        return this;
+    }
+
+    public final RestClientBuilder loader(Context context) {
+        mContext = context;
+        this.mLoaderStyle = LoaderStyle.BallClipRotatePulseIndicator;
+        return this;
+    }
+
+    public final RestClientBuilder file(String file) {
+        this.mFile = new File(file);
+        return this;
+    }
+
+    public final RestClientBuilder downLoadDir(String dir) {
+        this.DOWNLOAD_DIR = dir;
+        return this;
+    }
+
+    public final RestClientBuilder downLoadExtension(String extension) {
+        this.DOWNLOAD_EXTENSION = extension;
+        return this;
+    }
+
+    public final RestClientBuilder downLoadName(String name) {
+        this.DOWNLOAD_NAME = name;
+        return this;
+    }
+
     public final RestClient build() {
-        return new RestClient(mUrl, mParams, mSuccess, mFailure, mErrror, mBody);
+        return new RestClient(mContext, mUrl, mParams, mSuccess, mFailure, mErrror, mBody, mLoaderStyle, mFile, DOWNLOAD_DIR, DOWNLOAD_EXTENSION, DOWNLOAD_NAME);
     }
 }
