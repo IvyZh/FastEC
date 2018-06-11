@@ -1,4 +1,4 @@
-package com.ivy.lattecore.ui;
+package com.ivy.lattecore.ui.loader;
 
 /**
  * Created by Ivy on 2018/6/11.

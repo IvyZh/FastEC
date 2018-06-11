@@ -11,7 +11,7 @@ import com.ivy.lattecore.net.RestClient;
 import com.ivy.lattecore.net.callback.IError;
 import com.ivy.lattecore.net.callback.IFailure;
 import com.ivy.lattecore.net.callback.ISuccess;
-import com.ivy.lattecore.ui.LoaderStyle;
+import com.ivy.lattecore.ui.loader.LoaderStyle;
 import com.ivy.lattecore.utils.L;
 
 import butterknife.BindView;
@@ -44,7 +44,7 @@ public class ExampleDelegate extends LatteDelegate {
                     @Override
                     public void onSuccess(String response) {
                         L.v("onSuccess:" + response);
-                       // Toast.makeText(Latte.getApplication(), response, Toast.LENGTH_LONG).show();
+                        // Toast.makeText(Latte.getApplication(), response, Toast.LENGTH_LONG).show();
                     }
                 })
                 .error(new IError() {

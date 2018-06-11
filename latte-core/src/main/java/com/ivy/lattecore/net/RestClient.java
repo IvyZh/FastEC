@@ -7,8 +7,8 @@ import com.ivy.lattecore.net.callback.IFailure;
 import com.ivy.lattecore.net.callback.ISuccess;
 import com.ivy.lattecore.net.callback.RequestCallbacks;
 import com.ivy.lattecore.net.download.DownloadHandler;
-import com.ivy.lattecore.ui.LatteLoader;
-import com.ivy.lattecore.ui.LoaderStyle;
+import com.ivy.lattecore.ui.loader.LatteLoader;
+import com.ivy.lattecore.ui.loader.LoaderStyle;
 import com.ivy.lattecore.utils.L;
 
 import java.io.File;

@@ -5,7 +5,7 @@ import android.content.Context;
 import com.ivy.lattecore.net.callback.IError;
 import com.ivy.lattecore.net.callback.IFailure;
 import com.ivy.lattecore.net.callback.ISuccess;
-import com.ivy.lattecore.ui.LoaderStyle;
+import com.ivy.lattecore.ui.loader.LoaderStyle;
 
 import java.io.File;
 import java.util.WeakHashMap;

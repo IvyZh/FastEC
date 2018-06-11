@@ -1,4 +1,4 @@
-package com.ivy.lattecore.ui;
+package com.ivy.lattecore.ui.loader;
 
 import android.content.Context;
 import android.text.TextUtils;

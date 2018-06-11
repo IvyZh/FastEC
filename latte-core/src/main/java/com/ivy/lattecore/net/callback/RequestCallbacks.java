@@ -3,8 +3,8 @@ package com.ivy.lattecore.net.callback;
 import android.os.Handler;
 
 import com.ivy.lattecore.net.RestCreator;
-import com.ivy.lattecore.ui.LatteLoader;
-import com.ivy.lattecore.ui.LoaderStyle;
+import com.ivy.lattecore.ui.loader.LatteLoader;
+import com.ivy.lattecore.ui.loader.LoaderStyle;
 
 import retrofit2.Call;
 import retrofit2.Callback;
