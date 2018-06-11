@@ -23,3 +23,5 @@ https://github.com/YoKeyword/Fragmentation
 ### getSupportDelegate().start(new LauncherScrollDelegate(), SINGLETASK);
 
 如何销毁上一个Delegates?
+
+解决：getSupportDelegate().startWithPop(new LauncherScrollDelegate());
